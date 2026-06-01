@@ -25,14 +25,32 @@ body{
   font-family: Nata Sans, sans-serif;
 }
 
-.infoboks{
+.infoboks {
   background: #FEE6BA;
   padding: 60px;
   border-radius: 10px;
   margin: auto;
   height: 525px;
-
 }
+
+  .prisrække{
+    margin-bottom:50px;
+}
+
+  h4{
+    font-size:30px;
+    color:#0d4b2e;
+  }
+
+.course-image{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+}
+
 // Styling af de grønne bokse
 
 .infoboks2{
@@ -58,9 +76,6 @@ h2{
   margin-bottom:30px;
 }
 
-p{
-  text-align: center;
-}
 
 .info-text p{
   font-size: 23px;
