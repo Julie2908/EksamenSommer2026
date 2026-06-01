@@ -3,6 +3,10 @@
 
 // 2. Include any default variable overrides here
 $link-decoration: none;
+$primary:       #FA9939;
+$secondary:     #1A462D;
+$light:         #FEE6BA;
+$info:          #008C3E;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -11,6 +15,7 @@ $link-decoration: none;
 // 4. Include any default map overrides here
 $custom-colors: (
 	"farve": $cyan-400,
+
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -18,3 +23,801 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+
+.body{
+  background-color: #F9F9F9;
+}
+
+/*------------------------------------------
+NAVBAR
+ -------------------------------------------*/
+
+.custom-nav {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-link {
+  color: #FA9939 !important;
+  font-weight: 1000;
+}
+
+.nav-link:hover {
+  color: #1A462D !important; /* dette tilføjer en hover */
+}
+
+.nav-link {
+  color: #FA9939 !important;
+  transition: color 0.2s ease;
+}
+
+.offcanvas .nav-link {
+  color: #FA9939 !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(53%) sepia(72%) saturate(1290%) hue-rotate(346deg) brightness(97%) contrast(95%);
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0; /* valgfrit – gør den endnu mere clean */
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  width: 40px;   /* standard er 24px */
+  height: 40px;  /* standard er 24px */
+}
+
+
+
+
+
+
+/*----------------------------------------
+ Forside Billede Med Overskrift
+  ----------------------------------------*/
+
+/* Sektion spacing */
+.hygge-box {
+  padding: 60px 60px 60px 60px ;
+  background-color: #FEE6BA ;
+  border-radius: 30px;
+}
+
+
+/* Titel */
+.hygge-title {
+  color: #1A462D;        /* orange */
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Brødtekst */
+.hygge-text {
+  color: #1A462D;        /* mørkegrøn */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Billede */
+.hygge-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Mobilvenlig */
+@media (max-width: 768px) {
+  .hygge-title {
+    text-align: center;
+  }
+
+  .hygge-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hygge-image {
+    margin-top: 20px;
+  }
+}
+
+
+/*--------------------------------------------
+Gratis aktiviteter
+---------------------------------------------*/
+
+.activities-heading {
+  background-color: #FEE6BA;      /* beige */
+  color: #FA9939;                 /* orange tekst */
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px 300px;
+  border-radius: 50px;            /* gør den rund */
+  width: fit-content;
+  margin: 0 auto 40px auto;       /* centrerer og giver luft under */
+}
+
+.late-night-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.late-night-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+
+
+/*---------------------------------------
+GRØNNE BOKSE
+-----------------------------------------*/
+
+/* Sektion spacing */
+.activities-section {
+  padding: 60px 0;
+}
+
+.activity-box {
+  background-color: #1A462D; /* mørkegrøn */
+  color: #FEE6BA; /* lys beige tekst */
+  padding: 25px;
+  border-radius: 12px;
+  height: 100%; /* gør alle bokse lige høje */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overskrift */
+.activity-box h3 {
+  color: #FA9939; /* orange */
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Tekst */
+.activity-box p {
+  color: #FEE6BA;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* Mobilvenlig */
+@media (max-width: 768px) {
+  .activity-box {
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------
+   ARRANGEMENTER
+-------------------------------------------------- */
+
+.arrangement-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.arrangement-card h4 {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+
+/* Selve knappen */
+.late-night-btn {
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: #008C3E;   /* orange */
+  color: #FEE6BA;              /* mørkegrøn tekst */
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Hover-effekt */
+.late-night-btn:hover {
+  background-color: #1A462D;
+  color: #FEE6BA;
+}
+
+
+
+/*---------------------------------------
+PRISER OG DAGENS RET
+---------------------------------------*/
+
+/* Sektion spacing */
+.info-boxes {
+  padding: 60px 0;
+}
+
+/* Selve boksen */
+.info-box {
+  background-color: #FEE6BA;
+  border-radius: 20px;
+  padding: 35px 40px;
+  text-align: center;
+  color: #1A462D;
+  height: 100%;
+  position: relative; /* så ikonet kan sidde i bunden */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Ikon */
+.info-icon {
+  width: 300px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Overskrift */
+.info-box h3 {
+    color: #FA9939;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Linjer med tekst + pris */
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 20px 50px 10px 50px;
+    font-weight: 600;
+  }
+
+/* Mindre tekst */
+.info-small {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Pris nederst */
+.info-price {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-top: 15px;
+  color: #FA9939;
+}
+
+/* Uge-tekst */
+.info-week {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .info-box {
+    width: 100%;
+    margin: 0 auto 20px auto; /* luft mellem bokse */
+    padding: 25px 20px;       /* mindre padding så teksten ikke klemmes */
+    border-radius: 15px;
+  }
+
+  .info-line {
+    flex-direction: column;   /* linjerne bliver lodrette */
+    align-items: center;
+    gap: 5px;
+  }
+
+  .info-box h3 {
+    font-size: 1.6rem;        /* lidt mindre overskrift */
+    margin-bottom: 15px;
+  }
+
+  .info-icon {
+    width: 60px;              /* mindre ikon */
+    bottom: 15px;
+  }
+}
+
+
+
+
+
+/* --------------------------------------------------
+   KLUB SEKTION
+-------------------------------------------------- */
+
+/* Topbanner */
+.club-header {
+  background-color: #1A462D;
+  color: #FEE6BA;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.club-header h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.club-header p {
+  letter-spacing: 3px;
+  font-size: 1.1rem;
+}
+
+/* Wrapper */
+.club-wrapper {
+  margin: 0 auto;
+}
+
+.club-wrapper {
+  background-color: #FEE6BA;
+  padding: 50px 50px;
+}
+
+
+/* Billeder side om side */
+.club-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.club-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Midtertekst */
+.club-text {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #1A462D;
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  font-weight: 600;
+}
+
+/* Underoverskrift */
+.club-subtitle {
+  text-align: center;
+  color: #FA9939;
+  font-weight: 900;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+/* Fire bokse */
+.club-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+    background-color: #FEE6BA;
+    padding: 30px;
+    border-radius: 12px;
+
+}
+
+.benefit-box {
+  background-color: #FEE6BA;
+  color: #1A462D;
+  padding: 18px 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+
+  .club-images {
+    grid-template-columns: 1fr;
+  }
+
+  .club-img {
+    height: 250px;
+  }
+
+  .club-benefits {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefit-box {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .club-text {
+    font-size: 1.2rem;
+  }
+}
+
+.club-btn-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.club-btn {
+  background-color: #008C3E;      /* grøn */
+  color: #FEE6BA;                 /* beige tekst */
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.club-btn:hover {
+  background-color: #1A462D;      /* hover */
+  color: #FEE6BA;
+}
+
+
+
+/* --------------------------------------------------
+   SPØRGSMÅL
+-------------------------------------------------- */
+
+/* FAQ container */
+.faq-item {
+  margin-bottom: 15px;
+}
+
+/* Grøn knap */
+.faq-question {
+  width: 100%;
+  background-color: #1A462D;
+  color: #FEE6BA;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Orange pil */
+.faq-question .arrow {
+  color: #FA9939;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+/* Svar */
+.faq-answer {
+  background-color: #FEE6BA;
+  color: #1A462D;
+  padding: 15px 20px;
+  border-radius: 0 0 12px 12px;
+  margin-top: -5px;
+  display: none;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Pil roterer når åben */
+.faq-item.open .arrow {
+  transform: rotate(90deg);
+}
+
+.faq-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/*------------------------------
+FOOTER
+ ----------------------------------*/
+
+
+/* FOOTER WRAPPER */
+.footer {
+  background-color: #1A462D;
+  color: #FEE6BA;
+  padding: 40px 60px;
+}
+
+/* FLEX LAYOUT */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* VENSTRE KOLONNE */
+.footer-left {
+  flex: 1;
+}
+
+/* MIDTERSTE KOLONNE */
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* HØJRE KOLONNE */
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-right h4 {
+  color: #FEE6BA;
+  margin-bottom: 10px;
+  margin-right: 300px;
+}
+
+.season h5 {
+  border-bottom: 1px solid #FEE6BA;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.season p {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 0;
+}
+
+/* RESPONSIV FOOTER */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .season h5,
+  .season p {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* MIDTERSTE KOLONNE */
+.footer-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrerer alt vandret */
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+/* Sociale links under logo */
+.social-links {
+  display: flex;
+  flex-direction: column; /* gør dem lodrette */
+  align-items: center;    /* centrerer dem */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #FEE6BA;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+}
+
+
+/*----------------------------------------------------------------------------------------------
+KODE TIL SIDEN ARRANGEMENTER
+ ----------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------
+BILLEDE med tekst
+ ----------------------------------*/
+.arrangement-section {
+  background-color: #FEE6BA; /* lys beige baggrund */
+  padding: 60px 40px;
+}
+
+.arrangement-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Billede */
+.arrangement-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Tekst */
+.arrangement-text h2 {
+  color: #FA9939; /* orange */
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.arrangement-text p {
+  color: #1A462D; /* mørkegrøn */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Knap */
+.arrangement-btn {
+  display: inline-block;
+  background-color: #008C3E; /* lysegrøn */
+  color: #FEE6BA;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+
+.arrangement-btn:hover {
+  background-color: #1A462D;
+  color: #FEE6BA;
+}
+
+.arrangement-btn-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Mobil */
+@media (max-width: 768px) {
+  .arrangement-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .arrangement-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .arrangement-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/*------------------------------
+Arrangementer CARD
+ ----------------------------------*/
+
+/* Grid layout */
+.arrangement-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+/* Kort */
+.arr-card {
+  background-color: #FEE6BA;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding-bottom: 20px;
+}
+
+/* Billede */
+.arr-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Titel */
+.arr-card h3 {
+  color: #1A462D;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 15px 0;
+}
+
+/* Grøn knap */
+.arr-btn {
+  background-color: #008C3E;
+  color: #FEE6BA;
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.arr-btn:hover {
+  background-color: #1A462D;
+  color: #FEE6BA;
+}
+
+/* Mobil */
+@media (max-width: 992px) {
+  .arrangement-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .arrangement-cards {
+    grid-template-columns: 1fr;
+  }
+}
