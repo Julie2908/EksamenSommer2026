@@ -27,6 +27,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .body{
   background-color: #F9F9F9;
+  font-family: Nata Sans, sans-serif;
 }
 
 /*------------------------------------------
@@ -821,3 +822,131 @@ Arrangementer CARD
     grid-template-columns: 1fr;
   }
 }
+
+
+/*----------------------------------------------------------------------------------------------
+KODE TIL SIDEN INFO OG KONTAKT
+ ----------------------------------------------------------------------------------------------*/
+
+/*---------------------
+Kodning af boks med oversigt over priser
+------------------------*/
+.firstSection{
+  background-color: #FEE6BA;
+  border-radius: 10px;
+
+  .priser{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+/*------------------
+Styling af de grønne bokse
+ ---------------------------*/
+
+.infoboks2{
+  background: #0a3622;
+  border-radius: 10px;
+  padding: 60px;
+  height:454px;
+  font-family: Nata Sans, sans-serif;
+}
+
+.line{
+  height:2px;
+  background:#FEE6BA;
+}
+
+.space-top{
+  height:20px;
+}
+
+h2{
+  color: #FA9939;
+  text-align:center;
+  margin-bottom:30px;
+}
+
+
+.info-text p{
+  font-size: 23px;
+  font-family: Nata Sans;
+}
+
+.praktiskInfoTekst{
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .praktiskInfoTekst{
+    font-size: 20px;
+  }
+}
+
+
+/*------------------------------
+ Style på kontaktformular
+ ------------------------------*/
+
+.kontakt{
+  margin: 200px;
+  justify-content: center;
+}
+
+.boks1{
+  background: #FEE6BA;
+  padding-bottom:5px;
+  border-radius: 10px;
+
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #FEE6BA;
+
+}
+
+
+.knap{
+  background: #008C3E;
+  color: #FEE6BA;
+  border:none;
+  border-radius: 25px;
+  width: 210px;
+  font-size: 22px;
+  font-family: Nata Sans, sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tekstBoksTekst{
+  width: 60%;
+  font-size: 12pt;
+}
+
+.sektionMo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10%;
+  background-color: #FEE6BA;
+  border-radius: 10px;
+
+  .prisMo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .divPris{
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+}
+
