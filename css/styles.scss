@@ -4,6 +4,7 @@
 // 2. Include any default variable overrides here
 $link-decoration: none;
 $primary: #F07E3F;
+$secondary: #0a3622;
 
 
 // 3. Include remainder of required Bootstrap stylesheets
@@ -25,31 +26,18 @@ body{
   font-family: Nata Sans, sans-serif;
 }
 
-.infoboks {
-  background: #FEE6BA;
-  padding: 60px;
+
+.firstSection{
+  background-color: #FEE6BA;
   border-radius: 10px;
-  margin: auto;
-  height: 525px;
-}
 
-  .prisrække{
-    margin-bottom:50px;
-}
-
-  h4{
-    font-size:30px;
-    color:#0d4b2e;
+  .priser{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-
-.course-image{
-
-  width:100%;
-
-  height:100%;
-
-  object-fit:cover;
 }
+
 
 // Styling af de grønne bokse
 
@@ -101,7 +89,6 @@ h2{
   flex-direction: row;
   justify-content: space-between;
   color: #FEE6BA;
-
 }
 
 
@@ -117,4 +104,29 @@ h2{
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+
+.sektionMo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10%;
+  background-color: #FEE6BA;
+  border-radius: 10px;
+
+  .prisMo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .divPris{
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+}
+
+.tekstBoksTekst{
+  width: 60%;
+  font-size: 12pt;
 }
