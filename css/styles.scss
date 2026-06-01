@@ -70,11 +70,22 @@ h2{
   font-family: Nata Sans;
 }
 
+.praktiskInfoTekst{
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .praktiskInfoTekst{
+    font-size: 20px;
+  }
+}
+
 
 // Style på kontaktformular
 
 .kontakt{
   margin: 200px;
+  justify-content: center;
 }
 
 .boks1{
@@ -106,6 +117,10 @@ h2{
   padding-right: 30px;
 }
 
+.tekstBoksTekst{
+  width: 60%;
+  font-size: 12pt;
+}
 
 .sektionMo{
   display: flex;
@@ -126,7 +141,4 @@ h2{
   }
 }
 
-.tekstBoksTekst{
-  width: 60%;
-  font-size: 12pt;
-}
+
