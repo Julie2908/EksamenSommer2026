@@ -3,6 +3,9 @@
 
 // 2. Include any default variable overrides here
 $link-decoration: none;
+$primary: #F07E3F;
+$secondary: #0a3622;
+
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -18,3 +21,112 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+body{
+  font-family: Nata Sans, sans-serif;
+}
+
+
+.firstSection{
+  background-color: #FEE6BA;
+  border-radius: 10px;
+
+  .priser{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+// Styling af de grønne bokse
+
+.infoboks2{
+  background: #0a3622;
+  border-radius: 10px;
+  padding: 60px;
+  height:454px;
+  font-family: Nata Sans, sans-serif;
+}
+
+.line{
+  height:2px;
+  background:#FEE6BA;
+}
+
+.space-top{
+  height:20px;
+}
+
+h2{
+  color: #FA9939;
+  text-align:center;
+  margin-bottom:30px;
+}
+
+
+.info-text p{
+  font-size: 23px;
+  font-family: Nata Sans;
+}
+
+
+// Style på kontaktformular
+
+.kontakt{
+  margin: 200px;
+}
+
+.boks1{
+  background: #FEE6BA;
+  padding-bottom:5px;
+  border-radius: 10px;
+
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #FEE6BA;
+}
+
+
+.knap{
+  background: #008C3E;
+  color: #FEE6BA;
+  border:none;
+  border-radius: 25px;
+  width: 210px;
+  font-size: 22px;
+  font-family: Nata Sans, sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.sektionMo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10%;
+  background-color: #FEE6BA;
+  border-radius: 10px;
+
+  .prisMo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .divPris{
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+}
+
+.tekstBoksTekst{
+  width: 60%;
+  font-size: 12pt;
+}
